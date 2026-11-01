@@ -809,3 +809,15 @@ html {
         flex: 1 1 auto;
     }
 }
+
+/* Proyectos con varios enlaces */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    margin-top: 6px;
+}
+
+.project .project-links .text-link {
+    margin-top: 0;
+}
