@@ -4,754 +4,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Víctor Ruiz Esteban — Desarrollador de Software</title>
+    <title>Víctor Ruiz Esteban — Sistemas, automatización e IA</title>
     <meta name="description"
-        content="Portfolio de Víctor Ruiz Esteban. Desarrollador de software especializado en IA, sistemas informáticos y desarrollo de aplicaciones multiplataforma.">
-    <meta name="keywords" content="desarrollador, software, IA, DAM, portfolio, Víctor Ruiz Esteban">
+        content="Víctor Ruiz Esteban. Titulado en DAM y SMR. Automatización de procesos con IA y n8n, sistemas y redes, desarrollo de software.">
     <meta name="author" content="Víctor Ruiz Esteban">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Víctor Ruiz Esteban — Desarrollador de Software">
+    <meta property="og:title" content="Víctor Ruiz Esteban — Sistemas, automatización e IA">
     <meta property="og:description"
-        content="Portfolio profesional de Víctor Ruiz Esteban. Desarrollador Full-Stack y especialista en soluciones de IA.">
+        content="Titulado en DAM y SMR. Automatización con IA, sistemas y redes, desarrollo de software.">
     <meta property="og:type" content="website">
-    <!-- REEMPLAZAR ESTA URL LUEGO CON TU URL FINAL -->
-    <meta property="og:url" content="https://virues134-source.github.io/portfolio/">
-    <meta property="og:image" content="https://virues134-source.github.io/portfolio/assets/og-image.jpg">
+    <meta property="og:url" content="https://virues134-source.github.io/Portfolio/">
 
-    <!-- Favicon -->
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Phosphor Icons -->
-    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/fill/style.css">
-
-    <!-- Devicon -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-    <!-- Flag Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <!-- ========== PARTICLE CANVAS ========== -->
-    <canvas id="particle-canvas"></canvas>
+    <a class="skip-link" href="#proyectos" data-i18n="skip">Saltar al contenido</a>
 
-    <!-- ========== NAVBAR ========== -->
-    <nav id="navbar" class="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>VR<span class="logo-bracket">/&gt;</span>
-            </a>
+    <!-- ========== CABECERA ========== -->
+    <header class="site-header" id="top">
+        <div class="wrap header-row">
+            <a href="#top" class="brand">Víctor Ruiz Esteban</a>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about" class="nav-link" data-i18n="nav_about">Sobre mí</a></li>
-                <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Habilidades</a></li>
-                <li><a href="#languages" class="nav-link" data-i18n="nav_languages">Idiomas</a></li>
-                <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Proyectos</a></li>
-                <li><a href="#resume" class="nav-link" data-i18n="nav_resume">Trayectoria</a></li>
-                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contacto</a></li>
-            </ul>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="#proyectos" class="nav-link" data-i18n="nav_work">Proyectos</a>
+                <a href="#trayectoria" class="nav-link" data-i18n="nav_path">Trayectoria</a>
+                <a href="#habilidades" class="nav-link" data-i18n="nav_skills">Habilidades</a>
+                <a href="#contacto" class="nav-link" data-i18n="nav_contact">Contacto</a>
+            </nav>
 
-            <div class="nav-right">
-                <button id="lang-toggle" class="lang-toggle" aria-label="Cambiar idioma">
-                    <span class="lang-label" id="lang-label">EN</span>
+            <div class="header-actions">
+                <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English">
+                    <span class="lang-on" id="lang-current">ES</span><span class="lang-sep">/</span><span
+                        id="lang-other">EN</span>
                 </button>
-                <button id="hamburger" class="hamburger" aria-label="Menú" aria-expanded="false">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-controls="site-nav"
+                    aria-expanded="false">
+                    <span data-i18n="menu">Menú</span>
                 </button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- ========== HERO ========== -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
+    <main>
+        <!-- ========== PORTADA ========== -->
+        <section class="hero wrap" aria-labelledby="hero-title">
             <div class="hero-text">
-                <p class="hero-greeting" data-i18n="hero_greeting">Hola, soy</p>
-                <h1 class="hero-name">
-                    <span class="name-line">Víctor</span>
-                    <span class="name-line accent">Ruiz Esteban<span class="dot">.</span></span>
-                </h1>
-                <p class="hero-subtitle">
-                    <span class="typing-wrapper">
-                        <span id="typing-text" class="typing-text"></span>
-                        <span class="cursor">|</span>
-                    </span>
-                </p>
-                <p class="hero-description" data-i18n="hero_description">
-                    Desarrollador de soluciones de IA, especializado en sistemas informáticos y gestión de redes.
-                    Apasionado por la tecnología y el aprendizaje continuo.
-                </p>
-
-                <div class="hero-cta" style="display: flex; gap: 15px; flex-wrap: wrap;">
-                    <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_contact">
-                        <i class="ph ph-paper-plane-tilt"></i> Contactar
-                    </a>
-                    <a href="#projects" class="btn btn-outline" data-i18n="hero_cta_projects">
-                        <i class="ph ph-code"></i> Ver proyectos
-                    </a>
-                    <a href="assets/Curriculum_VictorRuiz.pdf" download="Curriculum_VictorRuiz.pdf" class="btn btn-outline" style="border-color: var(--accent); color: var(--accent);">
-                        <i class="ph ph-download-simple"></i> <span data-i18n="hero_cta_cv">Descargar CV</span>
-                    </a>
-                </div>
-
-                <div class="hero-social">
-                    <a href="https://www.linkedin.com/in/v%C3%ADctor-ruiz-esteban/" target="_blank"
-                        rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                        <i class="ph ph-linkedin-logo"></i>
-                    </a>
-                    <a href="https://github.com/virues134-source" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="GitHub">
-                        <i class="ph ph-github-logo"></i>
-                    </a>
-                    <a href="mailto:virues134@gmail.com" class="social-link" aria-label="Email">
-                        <i class="ph ph-envelope-simple"></i>
-                    </a>
+                <h1 id="hero-title" class="hero-title">Víctor Ruiz Esteban</h1>
+                <p class="hero-role" data-i18n="hero_role">Técnico en sistemas, desarrollo y automatización con IA</p>
+                <p class="hero-lead" data-i18n="hero_lead">Titulado en DAM y SMR. Perfil técnico que une sistemas y
+                    redes, desarrollo de aplicaciones y automatización de procesos con IA. Experiencia con workflows
+                    de n8n, APIs REST y despliegue en cloud, además de soporte técnico y mantenimiento de redes.</p>
+                <div class="hero-actions">
+                    <a href="assets/Curriculum_VictorRuiz.pdf" download="Curriculum_VictorRuiz.pdf"
+                        class="btn btn-solid" data-i18n="cta_cv">Descargar CV</a>
+                    <a href="mailto:virues134@gmail.com" class="btn btn-line" data-i18n="cta_mail">Escríbeme</a>
                 </div>
             </div>
 
-            <div class="hero-image">
-                <div class="photo-container">
-                    <div class="photo-placeholder has-photo" id="profile-photo">
-                        <img src="assets/profile.png" alt="Víctor Ruiz Esteban">
+            <figure class="hero-photo">
+                <img src="assets/profile.png" alt="Retrato de Víctor Ruiz Esteban" width="841" height="1182">
+            </figure>
+
+            <dl class="areas" aria-label="Áreas">
+                <div class="area">
+                    <dt data-i18n="area1_name">Sistemas y redes</dt>
+                    <dd data-i18n="area1_proof">Grado Medio en SMR y prácticas como técnico de sistemas en Abai:
+                        soporte, redes y mantenimiento.</dd>
+                    <dd class="meta">SMR · Abai · 2022–2024</dd>
+                </div>
+                <div class="area">
+                    <dt data-i18n="area2_name">Desarrollo</dt>
+                    <dd data-i18n="area2_proof">Grado Superior en DAM: programación, bases de datos y desarrollo web y
+                        móvil, con PokéLab como proyecto final.</dd>
+                    <dd class="meta">DAM · 2024–2026</dd>
+                </div>
+                <div class="area">
+                    <dt data-i18n="area3_name">Automatización e IA</dt>
+                    <dd data-i18n="area3_proof">Workflows de n8n con IA, APIs REST y despliegue en cloud en Valvia.
+                    </dd>
+                    <dd class="meta">Valvia · 2026</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- ========== TRABAJO ========== -->
+        <section id="proyectos" class="section wrap" aria-labelledby="work-title">
+            <h2 id="work-title" class="section-title" data-i18n="work_title">Proyectos</h2>
+
+            <article class="project">
+                <a class="project-shot" href="https://github.com/virues134-source/TFG" target="_blank"
+                    rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                    <img src="assets/project-pokelab.png" alt="" width="1024" height="497" loading="lazy">
+                </a>
+                <div class="project-body">
+                    <h3 class="project-title">PokéLab</h3>
+                    <p class="meta" data-i18n="p1_meta">Proyecto final de DAM · 2026</p>
+                    <p data-i18n="p1_desc">Aplicación web con Pokédex, constructor de equipos, calculadora de daño y
+                        el minijuego Pokédle. Frontend en React y TypeScript sobre una API en Spring Boot con
+                        PostgreSQL.</p>
+                    <ul class="stack" aria-label="Tecnologías">
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>Spring Boot</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                    <a class="text-link" href="https://github.com/virues134-source/TFG" target="_blank"
+                        rel="noopener noreferrer"><span data-i18n="p1_link">Ver el código en GitHub</span>
+                        <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M4 12 12 4M5.5 4H12v6.5" />
+                        </svg></a>
+                </div>
+            </article>
+
+            <article class="project">
+                <a class="project-shot" href="https://valvia.es" target="_blank" rel="noopener noreferrer"
+                    tabindex="-1" aria-hidden="true">
+                    <img src="assets/project-valvia.png" alt="" width="1024" height="504" loading="lazy">
+                </a>
+                <div class="project-body">
+                    <h3 class="project-title">valvia.es</h3>
+                    <p class="meta" data-i18n="p2_meta">Web corporativa · Valvia · 2026</p>
+                    <p data-i18n="p2_desc">Web de Valvia, empresa de automatización con IA. Diseño de la web y
+                        desarrollo de su asistente con IA, que responde las dudas de los visitantes.</p>
+                    <ul class="stack" aria-label="Tecnologías">
+                        <li>React</li>
+                        <li>Vite</li>
+                        <li>n8n</li>
+                    </ul>
+                    <a class="text-link" href="https://valvia.es" target="_blank" rel="noopener noreferrer"><span
+                            data-i18n="p2_link">Visitar valvia.es</span>
+                        <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M4 12 12 4M5.5 4H12v6.5" />
+                        </svg></a>
+                </div>
+            </article>
+        </section>
+
+        <!-- ========== TRAYECTORIA ========== -->
+        <section id="trayectoria" class="section wrap" aria-labelledby="path-title">
+            <h2 id="path-title" class="section-title" data-i18n="path_title">Trayectoria</h2>
+
+            <ol class="timeline">
+                <li class="entry">
+                    <p class="entry-date meta" data-i18n="e1_date">feb. 2026 – may. 2026</p>
+                    <div class="entry-body">
+                        <h3>AI Solutions Developer <span class="at">· Valvia</span></h3>
+                        <p class="meta" data-i18n="e1_type">Contrato de prácticas · En remoto</p>
+                        <p data-i18n="e1_desc">Automatización de procesos con workflows de n8n que integran modelos de
+                            IA, APIs REST y servicios cloud.</p>
                     </div>
-                    <div class="photo-glow"></div>
-                    <div class="photo-ring"></div>
-                </div>
-            </div>
-        </div>
-
-        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-            <div class="scroll-mouse">
-                <div class="scroll-wheel"></div>
-            </div>
-        </a>
-    </section>
-
-    <!-- ========== ABOUT ========== -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title reveal">
-                <span class="section-number">01.</span>
-                <span data-i18n="about_title">Sobre mí</span>
-                <span class="section-line"></span>
-            </h2>
-
-            <div class="about-grid reveal">
-                <div class="about-text">
-                    <div class="about-card glass-card">
-                        <h3 class="about-card-title" data-i18n="about_card_title">
-                            <i class="ph ph-identification-badge"></i> Perfil
-                        </h3>
-                        <p data-i18n="about_p1">
-                            Soy un desarrollador de software titulado en Desarrollo de Aplicaciones Multiplataforma
-                            (DAM) y Sistemas Microinformáticos y Redes (SMR) en La Inmaculada - Padres Escolapios.
-                            Apasionado por la tecnología, la inteligencia artificial y el desarrollo de soluciones
-                            innovadoras, siempre en búsqueda de nuevos retos para poner a prueba mis habilidades y
-                            expandir mis conocimientos.
-                        </p>
-                        <p data-i18n="about_p2">
-                            Mi experiencia más reciente fue como AI Solutions Developer en Valvia, donde desarrollé e
-                            implementé soluciones de IA y Machine Learning, automatización de procesos con n8n y
-                            creación de workflows integrando APIs y servicios cloud. En esta etapa adquirí sólidas
-                            habilidades en arquitecturas modernas y escalables. También realicé prácticas en Abai en el
-                            área de sistemas informáticos, donde afiancé mi conocimiento sobre redes y soporte IT.
-                        </p>
-                        <p data-i18n="about_p3">
-                            Busco oportunidades donde pueda aportar mi energía, mis ganas de aprender y mi conocimiento
-                            técnico para crecer profesionalmente en un entorno dinámico. Me considero una persona
-                            resolutiva, con facilidad para el trabajo en equipo y una gran capacidad de adaptación ante
-                            los cambios tecnológicos.
-                        </p>
+                </li>
+                <li class="entry">
+                    <p class="entry-date meta" data-i18n="e2_date">sept. 2024 – jun. 2026</p>
+                    <div class="entry-body">
+                        <h3 data-i18n="e2_title">Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+                        <p class="meta">La Inmaculada – Padres Escolapios</p>
+                        <p data-i18n="e2_desc">Programación, bases de datos, desarrollo web y móvil, metodologías
+                            ágiles. Proyecto final: PokéLab.</p>
                     </div>
-                </div>
-
-                <div class="about-skills">
-                    <h3 class="about-card-title" data-i18n="about_soft_title">
-                        <i class="ph ph-sparkle"></i> Soft Skills
-                    </h3>
-                    <div class="soft-skills-grid">
-                        <div class="soft-skill-card glass-card">
-                            <i class="ph ph-rocket-launch"></i>
-                            <span data-i18n="soft_proactive">Proactividad</span>
-                        </div>
-                        <div class="soft-skill-card glass-card">
-                            <i class="ph ph-users-three"></i>
-                            <span data-i18n="soft_teamwork">Trabajo en equipo</span>
-                        </div>
-                        <div class="soft-skill-card glass-card">
-                            <i class="ph ph-lightbulb"></i>
-                            <span data-i18n="soft_creativity">Creatividad</span>
-                        </div>
-                        <div class="soft-skill-card glass-card">
-                            <i class="ph ph-puzzle-piece"></i>
-                            <span data-i18n="soft_problem_solving">Resolución de problemas</span>
-                        </div>
-                        <div class="soft-skill-card glass-card">
-                            <i class="ph ph-book-open-text"></i>
-                            <span data-i18n="soft_learning">Aprendizaje continuo</span>
-                        </div>
-                        <div class="soft-skill-card glass-card">
-                            <i class="ph ph-arrows-clockwise"></i>
-                            <span data-i18n="soft_adaptability">Adaptabilidad</span>
-                        </div>
+                </li>
+                <li class="entry">
+                    <p class="entry-date meta" data-i18n="e3_date">abr. 2024 – jun. 2024</p>
+                    <div class="entry-body">
+                        <h3><span data-i18n="e3_title">Técnico de sistemas en prácticas</span> <span class="at">·
+                                Abai</span></h3>
+                        <p class="meta" data-i18n="e3_type">Jornada completa · Madrid · Presencial</p>
+                        <p data-i18n="e3_desc">Soporte técnico, gestión de redes y mantenimiento de equipos, trabajando
+                            con perfiles senior y trato directo con cliente.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </li>
+                <li class="entry">
+                    <p class="entry-date meta" data-i18n="e4_date">sept. 2022 – jun. 2024</p>
+                    <div class="entry-body">
+                        <h3 data-i18n="e4_title">Grado Medio en Sistemas Microinformáticos y Redes (SMR)</h3>
+                        <p class="meta">La Inmaculada – Padres Escolapios</p>
+                        <p data-i18n="e4_desc">Hardware, redes, sistemas operativos y soporte técnico.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
 
-    <!-- ========== SKILLS ========== -->
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title reveal">
-                <span class="section-number">02.</span>
-                <span data-i18n="skills_title">Habilidades técnicas</span>
-                <span class="section-line"></span>
-            </h2>
+        <!-- ========== HABILIDADES ========== -->
+        <section id="habilidades" class="section wrap" aria-labelledby="skills-title">
+            <h2 id="skills-title" class="section-title" data-i18n="skills_title">Habilidades</h2>
 
-            <div class="skills-container reveal" style="display: flex; flex-direction: column; gap: 40px;">
-                <!-- Lenguajes -->
+            <dl class="skills">
                 <div class="skill-row">
-                    <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 20px; border-left: 3px solid var(--accent); padding-left: 12px; letter-spacing: 1px; text-transform: uppercase;"
-                        data-i18n="skills_languages">Lenguajes de programación</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-java-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Java</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-python-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Python</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-javascript-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">JavaScript</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-typescript-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">TypeScript</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-azuresqldatabase-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">SQL</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-html5-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">HTML</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-css3-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">CSS</span>
-                        </div>
-                    </div>
+                    <dt data-i18n="sk_lang">Lenguajes</dt>
+                    <dd>
+                        <ul class="skill-list">
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>SQL</li>
+                            <li>HTML y CSS</li>
+                        </ul>
+                    </dd>
                 </div>
-
-                <!-- Frameworks -->
                 <div class="skill-row">
-                    <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 20px; border-left: 3px solid var(--accent); padding-left: 12px; letter-spacing: 1px; text-transform: uppercase;"
-                        data-i18n="skills_frameworks">Frameworks & Librerías</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-spring-original colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Spring Boot</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-react-original colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">React</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-angularjs-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Angular</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-nodejs-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Node.js</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-vitejs-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Vite</span>
-                        </div>
-                    </div>
+                    <dt data-i18n="sk_fw">Frameworks</dt>
+                    <dd>
+                        <ul class="skill-list">
+                            <li>React</li>
+                            <li>Angular</li>
+                            <li>Spring Boot</li>
+                            <li>Node.js</li>
+                            <li>Vite</li>
+                        </ul>
+                    </dd>
                 </div>
-
-                <!-- Herramientas -->
                 <div class="skill-row">
-                    <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 20px; border-left: 3px solid var(--accent); padding-left: 12px; letter-spacing: 1px; text-transform: uppercase;"
-                        data-i18n="skills_tools">Herramientas & DevOps</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-git-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Git & GitHub</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-docker-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Docker</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="ph-fill ph-lightning" style="font-size: 1.8rem; color:#ff6b6b"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">n8n</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-vscode-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">VS Code</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-intellij-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">IntelliJ IDEA</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-linux-plain" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">Linux</span>
-                        </div>
-                    </div>
+                    <dt data-i18n="sk_auto">Automatización e IA</dt>
+                    <dd>
+                        <ul class="skill-list">
+                            <li>n8n</li>
+                            <li data-i18n="sk_api">APIs REST</li>
+                            <li data-i18n="sk_cloud">Despliegue en cloud</li>
+                        </ul>
+                    </dd>
                 </div>
-
-                <!-- Databases -->
                 <div class="skill-row">
-                    <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 20px; border-left: 3px solid var(--accent); padding-left: 12px; letter-spacing: 1px; text-transform: uppercase;"
-                        data-i18n="skills_databases">Bases de Datos</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-postgresql-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">PostgreSQL</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-mysql-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">MySQL</span>
-                        </div>
-                        <div class="glass-card"
-                            style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-radius: 12px; cursor: default; transition: all 0.3s; border: 1px solid var(--border-color);"
-                            onmouseover="this.style.borderColor='var(--accent)'; this.style.transform='translateY(-3px)'"
-                            onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)'">
-                            <i class="devicon-mongodb-plain colored" style="font-size: 1.8rem;"></i>
-                            <span style="font-weight: 600; font-size: 0.95rem;">MongoDB</span>
-                        </div>
-                    </div>
+                    <dt data-i18n="sk_db">Bases de datos</dt>
+                    <dd>
+                        <ul class="skill-list">
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </dd>
                 </div>
+                <div class="skill-row">
+                    <dt data-i18n="sk_sys">Sistemas</dt>
+                    <dd>
+                        <ul class="skill-list">
+                            <li>Linux</li>
+                            <li data-i18n="sk_net">Redes</li>
+                            <li data-i18n="sk_support">Soporte técnico</li>
+                            <li>Docker</li>
+                            <li>Terminal</li>
+                        </ul>
+                    </dd>
+                </div>
+                <div class="skill-row">
+                    <dt data-i18n="sk_tools">Herramientas</dt>
+                    <dd>
+                        <ul class="skill-list">
+                            <li>Git y GitHub</li>
+                            <li>Jira</li>
+                            <li>VS Code</li>
+                            <li>IntelliJ IDEA</li>
+                        </ul>
+                    </dd>
+                </div>
+                <div class="skill-row">
+                    <dt data-i18n="sk_langs">Idiomas</dt>
+                    <dd>
+                        <ul class="skill-list">
+                            <li data-i18n="lang_es">Español nativo</li>
+                            <li data-i18n="lang_en">Inglés B2</li>
+                        </ul>
+                    </dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- ========== CONTACTO ========== -->
+        <section id="contacto" class="contact" aria-labelledby="contact-title">
+            <div class="wrap contact-grid">
+                <div>
+                    <h2 id="contact-title" class="contact-title" data-i18n="contact_title">¿Hablamos?</h2>
+                    <p class="contact-lead" data-i18n="contact_lead">Para cualquier consulta, escríbeme o descarga mi
+                        CV.</p>
+                </div>
+                <ul class="contact-list">
+                    <li><span class="contact-label">Email</span><a href="mailto:virues134@gmail.com">virues134@gmail.com</a></li>
+                    <li><span class="contact-label" data-i18n="contact_phone">Teléfono</span><a href="tel:+34674149387">+34 674 14 93 87</a></li>
+                    <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/v%C3%ADctor-ruiz-esteban/"
+                            target="_blank" rel="noopener noreferrer">víctor-ruiz-esteban</a></li>
+                    <li><span class="contact-label">GitHub</span><a href="https://github.com/virues134-source"
+                            target="_blank" rel="noopener noreferrer">virues134-source</a></li>
+                    <li><span class="contact-label">CV</span><a href="assets/Curriculum_VictorRuiz.pdf"
+                            download="Curriculum_VictorRuiz.pdf" data-i18n="contact_cv">Descargar PDF</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- ========== LANGUAGES ========== -->
-    <section id="languages" class="section languages">
-        <div class="container">
-            <h2 class="section-title reveal">
-                <span class="section-number">03.</span>
-                <span data-i18n="languages_title">Idiomas</span>
-                <span class="section-line"></span>
-            </h2>
-
-            <div class="languages-circles reveal"
-                style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 40px;">
-                <!-- Spanish -->
-                <div class="lang-circle-container"
-                    style="display: flex; flex-direction: column; align-items: center; gap: 20px; transition: transform 0.3s;"
-                    onmouseover="this.style.transform='translateY(-5px)'"
-                    onmouseout="this.style.transform='translateY(0)'">
-                    <div class="circle-wrap"
-                        style="position: relative; width: 120px; height: 120px; background: var(--bg-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 15px rgba(0,0,0,0.4); border: 1px solid var(--border-color);">
-                        <svg
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: rotate(-90deg);">
-                            <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.05)"
-                                stroke-width="6" />
-                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--accent)" stroke-width="6"
-                                stroke-dasharray="340" stroke-dashoffset="0"
-                                style="transition: stroke-dashoffset 2s ease-out; stroke-linecap: round;" />
-                        </svg>
-                        <div style="position: relative; z-index: 2; text-align: center;">
-                            <span class="fi fi-es"
-                                style="font-size: 2.2rem; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"></span>
-                        </div>
-                    </div>
-                    <div style="text-align: center;">
-                        <h3
-                            style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 4px; color: var(--text-primary);">
-                            Español</h3>
-                        <p style="color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;"
-                            data-i18n="lang_es_level">Nativo</p>
-                    </div>
-                </div>
-
-                <!-- English -->
-                <div class="lang-circle-container"
-                    style="display: flex; flex-direction: column; align-items: center; gap: 20px; transition: transform 0.3s;"
-                    onmouseover="this.style.transform='translateY(-5px)'"
-                    onmouseout="this.style.transform='translateY(0)'">
-                    <div class="circle-wrap"
-                        style="position: relative; width: 120px; height: 120px; background: var(--bg-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 15px rgba(0,0,0,0.4); border: 1px solid var(--border-color);">
-                        <svg
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: rotate(-90deg);">
-                            <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.05)"
-                                stroke-width="6" />
-                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--accent)" stroke-width="6"
-                                stroke-dasharray="340" stroke-dashoffset="85"
-                                style="transition: stroke-dashoffset 2s ease-out; stroke-linecap: round;" />
-                        </svg>
-                        <div style="position: relative; z-index: 2; text-align: center;">
-                            <span class="fi fi-gb"
-                                style="font-size: 2.2rem; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"></span>
-                        </div>
-                    </div>
-                    <div style="text-align: center;">
-                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 6px; color: var(--text-primary);"
-                            data-i18n="lang_en">Inglés</h3>
-                        <p style="color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;"
-                            data-i18n="lang_en_level">B2 - Intermedio Alto</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== PROJECTS ========== -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title reveal">
-                <span class="section-number">04.</span>
-                <span data-i18n="projects_title">Proyectos</span>
-                <span class="section-line"></span>
-            </h2>
-
-            <p class="section-subtitle reveal" data-i18n="projects_subtitle">
-                Aquí encontrarás algunos de los proyectos en los que he trabajado.
-            </p>
-
-            <div class="projects-grid reveal">
-                <!-- Project 1: PokéLab -->
-                <article class="project-card glass-card" data-tilt>
-                    <div class="project-image">
-                        <img src="assets/project-pokelab.png" alt="PokéLab - Trabajo de Fin de Grado">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link" aria-label="Ver demo">
-                                    <i class="ph ph-arrow-square-out"></i>
-                                </a>
-                                <a href="#" class="project-link" aria-label="Ver código">
-                                    <i class="ph ph-github-logo"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title" data-i18n="project1_title">PokéLab (TFG)</h3>
-                        <p class="project-desc" data-i18n="project1_desc">
-                            Tu nexo definitivo con el mundo Pokémon. Pokédex avanzada, constructor de equipos,
-                            calculadora de daño, Pokédle y mucho más. Trabajo de Fin de Grado.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 2: Valvia.es -->
-                <article class="project-card glass-card" data-tilt>
-                    <div class="project-image">
-                        <img src="assets/project-valvia.png" alt="Valvia.es - Automatización inteligente con IA">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://valvia.es" target="_blank" rel="noopener noreferrer"
-                                    class="project-link" aria-label="Ver web">
-                                    <i class="ph ph-arrow-square-out"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title" data-i18n="project2_title">Valvia.es</h3>
-                        <p class="project-desc" data-i18n="project2_desc">
-                            Web corporativa de Valvia, empresa de automatización inteligente con IA para empresas.
-                            Diseño moderno con SEO optimizado y rendimiento premium.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Vite</span>
-                            <span class="tag">SEO</span>
-                            <span class="tag">n8n</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== RESUME ========== -->
-    <section id="resume" class="section resume">
-        <div class="container">
-            <h2 class="section-title reveal">
-                <span class="section-number">05.</span>
-                <span data-i18n="resume_title">Trayectoria</span>
-                <span class="section-line"></span>
-            </h2>
-
-            <div class="resume-grid reveal"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px;">
-                <!-- Experiencia Column -->
-                <div class="resume-column">
-                    <h3 class="resume-column-title"
-                        style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; color: var(--text-primary);">
-                        <div
-                            style="width: 40px; height: 40px; border-radius: 12px; background: var(--accent-glow); display: flex; align-items: center; justify-content: center; color: var(--accent);">
-                            <i class="ph ph-briefcase" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <span data-i18n="experience_title">Experiencia</span>
-                    </h3>
-                    <div class="timeline">
-                        <!-- Valvia -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content glass-card">
-                                <span class="timeline-date" data-i18n="exp1_date">feb. 2026 — may. 2026</span>
-                                <h3 class="timeline-title" data-i18n="exp1_title">AI Solutions Developer</h3>
-                                <p class="timeline-institution">
-                                    <i class="ph ph-buildings"></i> Valvia — <span data-i18n="exp1_type">Contrato de
-                                        prácticas · En remoto</span>
-                                </p>
-                                <p class="timeline-desc" data-i18n="exp1_desc">
-                                    Desarrollo e implementación de soluciones de Inteligencia Artificial y Machine
-                                    Learning. Automatización de procesos y creación de workflows con n8n, integrando
-                                    APIs y servicios cloud.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Abai -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content glass-card">
-                                <span class="timeline-date" data-i18n="exp2_date">abr. 2024 — jun. 2024</span>
-                                <h3 class="timeline-title" data-i18n="exp2_title">Becario — Sistemas Informáticos</h3>
-                                <p class="timeline-institution">
-                                    <i class="ph ph-buildings"></i> Abai — <span data-i18n="exp2_type">Jornada completa
-                                        · Madrid · Presencial</span>
-                                </p>
-                                <p class="timeline-desc" data-i18n="exp2_desc">
-                                    Prácticas de Grado Medio en Sistemas Microinformáticos y Redes. Soporte técnico,
-                                    gestión de redes y mantenimiento de sistemas informáticos.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formación Column -->
-                <div class="resume-column">
-                    <h3 class="resume-column-title"
-                        style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; color: var(--text-primary);">
-                        <div
-                            style="width: 40px; height: 40px; border-radius: 12px; background: var(--accent-glow); display: flex; align-items: center; justify-content: center; color: var(--accent);">
-                            <i class="ph ph-graduation-cap" style="font-size: 1.5rem;"></i>
-                        </div>
-                        <span data-i18n="education_title">Formación</span>
-                    </h3>
-                    <div class="timeline">
-                        <!-- DAM -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content glass-card">
-                                <span class="timeline-date" data-i18n="edu1_date">sept. 2024 — jun. 2026</span>
-                                <h3 class="timeline-title" data-i18n="edu1_title">Grado Superior en DAM</h3>
-                                <p class="timeline-institution">
-                                    <i class="ph ph-graduation-cap"></i> La Inmaculada — Padres Escolapios
-                                </p>
-                                <p class="timeline-desc" data-i18n="edu1_desc">
-                                    Desarrollo de Aplicaciones Multiplataforma. Formación en programación, bases de
-                                    datos, desarrollo web y móvil, y metodologías ágiles.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- SMR -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content glass-card">
-                                <span class="timeline-date" data-i18n="edu2_date">sept. 2022 — jun. 2024</span>
-                                <h3 class="timeline-title" data-i18n="edu2_title">Grado Medio en SMR</h3>
-                                <p class="timeline-institution">
-                                    <i class="ph ph-graduation-cap"></i> La Inmaculada — Padres Escolapios
-                                </p>
-                                <p class="timeline-desc" data-i18n="edu2_desc">
-                                    Sistemas Microinformáticos y Redes. Formación en hardware, redes, sistemas
-                                    operativos y soporte técnico.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title reveal">
-                <span class="section-number">07.</span>
-                <span data-i18n="contact_title">Contacto</span>
-                <span class="section-line"></span>
-            </h2>
-
-            <p class="section-subtitle reveal" data-i18n="contact_subtitle">
-                ¿Tienes un proyecto en mente o quieres charlar? ¡No dudes en contactarme!
-            </p>
-
-            <div class="contact-grid reveal">
-                <div class="contact-info">
-                    <div class="contact-item glass-card">
-                        <i class="ph ph-envelope-simple"></i>
-                        <div>
-                            <h4 data-i18n="contact_email_label">Email</h4>
-                            <a href="mailto:virues134@gmail.com">virues134@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item glass-card">
-                        <i class="ph ph-phone"></i>
-                        <div>
-                            <h4 data-i18n="contact_phone_label">Teléfono</h4>
-                            <a href="tel:+34674149387">+34 674 14 93 87</a>
-                        </div>
-                    </div>
-                    <div class="contact-item glass-card">
-                        <i class="ph ph-linkedin-logo"></i>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/v%C3%ADctor-ruiz-esteban/" target="_blank"
-                                rel="noopener noreferrer">Víctor Ruiz Esteban</a>
-                        </div>
-                    </div>
-                    <div class="contact-item glass-card">
-                        <i class="ph ph-map-pin"></i>
-                        <div>
-                            <h4 data-i18n="contact_location_label">Ubicación</h4>
-                            <span data-i18n="contact_location">España</span>
-                        </div>
-                    </div>
-                </div>
-
-                <form id="contact-form" class="contact-form glass-card" novalidate>
-                    <div class="form-group">
-                        <label for="form-name" data-i18n="form_name">Nombre</label>
-                        <input type="text" id="form-name" name="name" required autocomplete="name" placeholder=" ">
-                        <span class="form-error" data-i18n="form_name_error">Por favor, introduce tu nombre</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="form-email" data-i18n="form_email">Email</label>
-                        <input type="email" id="form-email" name="email" required autocomplete="email" placeholder=" ">
-                        <span class="form-error" data-i18n="form_email_error">Por favor, introduce un email
-                            válido</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="form-message" data-i18n="form_message">Mensaje</label>
-                        <textarea id="form-message" name="message" rows="5" required placeholder=" "></textarea>
-                        <span class="form-error" data-i18n="form_message_error">Por favor, escribe un mensaje</span>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit" id="form-submit">
-                        <span data-i18n="form_send">Enviar mensaje</span>
-                        <i class="ph ph-paper-plane-tilt"></i>
-                    </button>
-                    <div class="form-status" id="form-status"></div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-bracket">&lt;</span>VR<span class="logo-bracket">/&gt;</span>
-                </div>
-                <div class="footer-socials">
-                    <a href="https://www.linkedin.com/in/v%C3%ADctor-ruiz-esteban/" target="_blank"
-                        rel="noopener noreferrer" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-                    <a href="https://github.com/virues134-source" target="_blank" rel="noopener noreferrer"
-                        aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
-                    <a href="mailto:virues134@gmail.com" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
-                </div>
-                <p class="footer-copy">
-                    &copy; <span id="current-year"></span> Víctor Ruiz Esteban.
-                    <span data-i18n="footer_rights">Todos los derechos reservados.</span>
-                </p>
-            </div>
+    <footer class="site-footer">
+        <div class="wrap footer-row">
+            <span>© <span id="current-year">2026</span> Víctor Ruiz Esteban</span>
+            <a href="#top" data-i18n="to_top">Volver arriba</a>
         </div>
     </footer>
 
