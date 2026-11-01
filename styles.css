@@ -644,7 +644,7 @@ html {
     .js .hero-title { animation-delay: 0.06s; }
     .js .hero-lead { animation-delay: 0.14s; }
     .js .hero-actions { animation-delay: 0.22s; }
-    .js .hero-photo { animation-delay: 0.18s; animation-name: unveil; }
+    .js .hero-photo { animation: unveil 900ms cubic-bezier(0.77, 0, 0.175, 1) 80ms both; }
     .js .areas { animation-delay: 0.34s; }
 
     @keyframes rise {
@@ -656,7 +656,6 @@ html {
 
     @keyframes unveil {
         from {
-            opacity: 0;
             clip-path: inset(100% 0 0 0);
         }
         to {
